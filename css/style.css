@@ -1,0 +1,63 @@
+:root {
+    --background-color-light: #ffffff;
+--background-color-dark: #000000;
+--text-color-light: #000000;
+--text-color-dark: #ffffff;
+}
+body.light-mode {
+background-color: var(--background-color-light);
+color:var(--text-color-light)
+}
+body.dark-mode {
+background-color: var(--background-color-dark);
+color:var(--text-color-dark)
+}
+button {
+margin: 20px;    
+padding: 10px 20px;
+cursor: pointer;
+}
+
+#model {
+/* Remove o ícone de triângulo de um elemento select */
+select {
+    -webkit-appearance: none; /* Para navegadores WebKit */
+    -moz-appearance: none; /* Para navegadores Firefox */
+    appearance: none; /* Padrão */
+    background: none; /* Remove o fundo padrão */
+    border: 1px solid #ccc; /* Adiciona uma borda personalizada */
+    padding: 10px; /* Adiciona padding */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+}
+
+/* Adiciona um ícone personalizado, se necessário */
+select::after {
+    content: ''; /* Conteúdo vazio para remover o ícone */
+}
+
+}
+
+
+#texto {
+    font-size: 16px;
+}
+#aumentarFonte {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+#texto {
+    font-size: 16px;
+}
+.botao {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}

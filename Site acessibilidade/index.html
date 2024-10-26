@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">    
+    <title>Quiz de Palavras</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz de Palavras</h1>
+        <div id="level-selection">
+            <h2>Escolha um Nível</h2>
+            <select id="level-select">
+                <option value="0">Nível 1</option>
+                <option value="1">Nível 2</option>
+                <option value="2">Nível 3</option>
+                <option value="3">Nível 4</option>
+                <option value="4">Nível 5</option>
+                <option value="5">Nível 6</option>
+                <option value="6">Nível 7</option>
+                <option value="7">Nível 8</option>
+                <option value="8">Nível 9</option>
+                <option value="9">Nível 10</option>
+                <option value="10">Nível 11</option>
+                <option value="11">Nível 12</option>
+                <option value="12">Nível 13</option>
+                <option value="13">Nível 14</option>
+                <option value="14">Nível 15</option>
+            </select>
+            <button onclick="startGame()">Iniciar Jogo</button>
+        </div>
+        <div id="game" style="display:none;">
+            <p id="question"></p>
+            <input type="text" id="answer" placeholder="Digite sua resposta">
+            <button onclick="checkAnswer()">Enviar</button>
+            <p id="result"></p>
+            <button onclick="nextQuestion()">Próxima Palavra</button>
+            <button onclick="restartGame()">Reiniciar Jogo</button>
+            <button id="toggle-speech" onclick="toggleSpeech()">Desabilitar Voz</button>
+            <button onclick="exitGame()">Sair</button>
+            <button onclick="toggleLanguage()">Inglês para Português</button>
+            <p>Pontuação: <span id="score">0</span></p>
+        </div>
+        <div id="conclusion" style="display:none;">
+            <h2>Fim do Jogo!</h2>
+            <p>Pontuação Final: <span id="final-score">0</span></p>
+            <button onclick="goToLevelSelection()">Escolher Nível</button>
+            <button onclick="restartCurrentLevel()">Reiniciar Nível</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+#puzzle {
+    display: grid;
+    margin: 20px auto;
+}
+
+.piece {
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.piece:hover {
+    transform: scale(1.1);
+}
+
+#feedback {
+    margin-top: 20px;
+}

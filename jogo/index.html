@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Construção Tranquilizante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monte seu Cenário</h1>
+        <p class="instruction">Arraste e solte os blocos na área de construção para criar seu próprio ambiente.</p>
+        
+        <div class="sidebar">
+            <h2>Blocos</h2>
+            <div class="block" draggable="true" data-type="árvore1">🌳 Árvore 1</div>
+            <div class="block" draggable="true" data-type="flor">🌸 Flor</div>
+            <div class="block" draggable="true" data-type="casa">🏠 Casa</div>
+            <div class="block" draggable="true" data-type="prédio">🏢 Prédio</div>
+            <div class="block" draggable="true" data-type="carro">🚗 Carro</div>
+            <div class="block" draggable="true" data-type="bicicleta">🚲 Bicicleta</div>
+            <div class="block" draggable="true" data-type="pessoa">👩 Pessoa</div>
+            <div class="block" draggable="true" data-type="criança">👦 Criança</div>
+            <div class="block" draggable="true" data-type="cachorro">🐶 Cachorro</div>
+            <div class="block" draggable="true" data-type="gato">🐱 Gato</div>
+        </div>
+
+        <div class="game-area" id="gameArea">
+            <p>Solte os blocos aqui para construir seu cenário.</p>
+        </div>
+
+        <div class="controls">
+            <button onclick="startMusic()">Iniciar Música</button>
+            <button onclick="toggleMusic()">Pausar/Reproduzir Música</button>
+            <label for="volumeSlider">Volume:</label>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5" onchange="changeVolume(this.value)">
+            <button onclick="saveScene()">Salvar Cenário</button>
+            <button onclick="clearScene()">Limpar Cenário</button>
+            <button onclick="previousScene()">Cenário Anterior</button>
+            <button onclick="nextScene()">Próximo Cenário</button>
+        </div>
+
+        <audio id="backgroundMusic" loop>
+            <source src="musica-tranquila.mp3" type="audio/mp3">
+            Seu navegador não suporta áudio.
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

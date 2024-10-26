@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quebra-Cabeça Acessível</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Quebra-Cabeça Acessível</h1>
+        <div id="level-selection">
+            <h2>Escolha um Nível de Dificuldade</h2>
+            <select id="level-select">
+                <option value="3">Fácil (3x3)</option>
+                <option value="4">Médio (4x4)</option>
+                <option value="5">Difícil (5x5)</option>
+                <option value="6">Muito Difícil (6x6)</option>
+                <option value="7">Extremo (7x7)</option>
+            </select>
+            <button onclick="startGame()">Iniciar Jogo</button>
+        </div>
+        <div id="game" style="display:none;">
+            <div id="puzzle"></div>
+            <button onclick="restartGame()">Reiniciar Jogo</button>
+            <button id="toggle-speech" onclick="toggleSpeech()">Desabilitar Voz</button>
+            <button id="increase-font" onclick="changeFontSize(2)">Aumentar Fonte</button>
+            <button id="decrease-font" onclick="changeFontSize(-2)">Diminuir Fonte</button>
+            <button onclick="exitGame()">Sair</button>
+            <p id="feedback"></p>
+        </div>
+        <div id="conclusion" style="display:none;">
+            <h2>Fim do Jogo!</h2>
+            <button onclick="goToLevelSelection()">Escolher Nível</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

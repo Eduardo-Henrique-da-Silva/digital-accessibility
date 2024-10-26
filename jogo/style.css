@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: #2a7a9a;
+}
+
+.instruction {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border: 2px solid #2a7a9a;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.sidebar h2 {
+    color: #2a7a9a;
+    margin-bottom: 10px;
+}
+
+.block {
+    margin: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #b0bec5;
+    border-radius: 5px;
+    cursor: grab;
+    font-size: 1.2em;
+}
+
+.game-area {
+    display: inline-block;
+    width: 600px;
+    height: 450px;
+    background-color: #e8f5e9;
+    border: 2px dashed #66bb6a;
+    border-radius: 8px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.draggable {
+    position: absolute;
+    cursor: grab;
+}
+
+button, label {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: #2a7a9a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #00796b;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+input[type="range"] {
+    width: 100px;
+}

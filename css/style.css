@@ -7,7 +7,7 @@ color: var(--text-color-dark);
 }
 
 :root {
-    --background-color-light: #ffffff;
+    --background-color-light: #D3D3D3;
 --background-color-dark: #00008B;
 --text-color-light: #000000;
 --text-color-dark: #ffffff;

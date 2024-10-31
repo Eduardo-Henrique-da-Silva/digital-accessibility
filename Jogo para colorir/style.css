@@ -11,7 +11,7 @@ h1 {
     color: #333;
 }
 
-#controls, #accessibilitySettings {
+#accessibilitySettings {
     margin-bottom: 20px;
     display: flex;
     gap: 10px;
@@ -32,11 +32,6 @@ h1 {
     cursor: pointer;
 }
 
-#drawingArea {
-    display: grid;
-    gap: 5px;
-}
-
 .cell {
     width: 50px;
     height: 50px;
@@ -47,4 +42,5 @@ h1 {
 
 .high-contrast {
     background-color: #000;
-    color: #fff
+    color: #fff;
+}

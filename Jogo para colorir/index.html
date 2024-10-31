@@ -30,4 +30,24 @@
 
     <!-- Paleta de cores -->
     <div id="palette">
-        <button c
+        <button class="color" style="background-color: red;" onclick="selectColor('red')">Vermelho</button>
+        <button class="color" style="background-color: green;" onclick="selectColor('green')">Verde</button>
+        <button class="color" style="background-color: blue;" onclick="selectColor('blue')">Azul</button>
+        <button class="color" style="background-color: yellow;" onclick="selectColor('yellow')">Amarelo</button>
+        <button class="color" style="background-color: orange;" onclick="selectColor('orange')">Laranja</button>
+        <button class="color" style="background-color: purple;" onclick="selectColor('purple')">Roxo</button>
+        <button onclick="openColorPicker()">Mais Cores</button>
+    </div>
+
+    <!-- Área de desenho -->
+    <div id="drawingArea" style="grid-template-columns: repeat(10, 50px);">
+        <!-- Células do desenho -->
+        <div class="cell" onclick="colorCell(this)"></div>
+        <div class="cell" onclick="colorCell(this)"></div>
+        <div class="cell" onclick="colorCell(this)"></div>
+        <!-- Adicione mais células conforme necessário -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

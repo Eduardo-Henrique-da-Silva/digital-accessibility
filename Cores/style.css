@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#drawCanvas {
+    border: 2px solid #333;
+    background-color: white;
+    cursor: crosshair;
+}
+
+#colorPalette {
+    margin-top: 20px;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 50%;
+    outline: none;
+}
+
+#moreColors {
+    padding: 10px 20px;
+    cursor: pointer;
+}

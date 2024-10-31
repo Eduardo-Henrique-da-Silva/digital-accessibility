@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Colorir</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Jogo de Colorir</h1>
+
+    <!-- Botões de configuração de acessibilidade -->
+    <div id="accessibilitySettings">
+        <button onclick="toggleLanguage()">Alternar Idioma</button>
+        
+        <label for="speechToggle">Leitura em Voz Alta:</label>
+        <input type="checkbox" id="speechToggle" onchange="toggleSpeech()">
+
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5" onchange="setVolume()">
+
+        <label for="rate">Velocidade:</label>
+        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1" onchange="setRate()">
+        
+        <button onclick="increaseFont()">Aumentar Fonte</button>
+        <button onclick="decreaseFont()">Diminuir Fonte</button>
+
+        <button onclick="toggleContrast()">Alternar Contraste</button>
+    </div>
+
+    <!-- Paleta de cores -->
+    <div id="palette">
+        <button c

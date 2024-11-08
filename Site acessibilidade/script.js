@@ -18,7 +18,6 @@ const levels = [
         { wordPT: "kiwi", wordEN: "kiwi" },
         { wordPT: "cereja", wordEN: "cherry" }
     ],
-    // Adicione mais níveis conforme necessário
 ];
 
 let currentLevel = 0;
@@ -26,14 +25,14 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let speechEnabled = true;
-let isEnglishToPortuguese = true; // Modo inicial
+let isEnglishToPortuguese = true;
 
 function startGame() {
     currentLevel = parseInt(document.getElementById("level-select").value);
     currentQuestions = shuffleArray(levels[currentLevel]);
     currentQuestionIndex = 0;
     score = 0;
-    document.getElementById("score").textContent = score; // Reinicia a pontuação
+    document.getElementById("score").textContent = score;
     document.getElementById("level-selection").style.display = "none";
     document.getElementById("game").style.display = "block";
     document.getElementById("conclusion").style.display = "none";
@@ -48,15 +47,15 @@ function showQuestion() {
             ? `Qual é a palavra em português para "${currentQuestion.wordEN}"?`
             : `Qual é a palavra em inglês para "${currentQuestion.wordPT}"?`;
         
-        if (speechEnabled) readAloud(questionElement.textContent);
+        if (speechEnabled) readAloud(isEnglishToPortuguese ? currentQuestion.wordEN : currentQuestion.wordPT);
     } else {
         endGame();
     }
 }
 
-function readAloud(text) {
-    const speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "pt-BR";
+function readAloud(word) {
+    const speech = new SpeechSynthesisUtterance(word);
+    speech.lang = isEnglishToPortuguese ? "en-US" : "pt-BR";
     window.speechSynthesis.speak(speech);
 }
 
@@ -75,20 +74,20 @@ function checkAnswer() {
         resultElement.textContent = `Incorreto! A resposta correta é "${correctAnswer}".`;
     }
     
-    document.getElementById("score").textContent = score; // Atualiza a pontuação
-    answerElement.value = ""; // Limpa o campo de resposta
+    document.getElementById("score").textContent = score;
+    answerElement.value = "";
 }
 
 function nextQuestion() {
     currentQuestionIndex++;
     showQuestion();
-    document.getElementById("result").textContent = ""; // Limpa o resultado
+    document.getElementById("result").textContent = "";
 }
 
 function endGame() {
     document.getElementById("game").style.display = "none";
     document.getElementById("conclusion").style.display = "block";
-    document.getElementById("final-score").textContent = score; // Mostra a pontuação final
+    document.getElementById("final-score").textContent = score;
 }
 
 function goToLevelSelection() {
@@ -97,7 +96,7 @@ function goToLevelSelection() {
 }
 
 function restartCurrentLevel() {
-    startGame(); // Reinicia o jogo com um novo conjunto de palavras
+    startGame();
 }
 
 function toggleSpeech() {
@@ -108,14 +107,14 @@ function toggleSpeech() {
 
 function exitGame() {
     document.getElementById("game").style.display = "none";
-    document.getElementById("level-selection").style.display = "block"; // Volta para a seleção de níveis
+    document.getElementById("level-selection").style.display = "block";
 }
 
 function toggleLanguage() {
     isEnglishToPortuguese = !isEnglishToPortuguese;
     const button = document.getElementById("toggle-language");
     button.textContent = isEnglishToPortuguese ? "Inglês para Português" : "Português para Inglês";
-    showQuestion(); // Atualiza a pergunta com o novo idioma
+    showQuestion();
 }
 
 function shuffleArray(array) {
@@ -127,6 +126,6 @@ function shuffleArray(array) {
 }
 
 window.onload = () => {
-    document.getElementById("game").style.display = "none"; // Esconde o jogo ao carregar
-    document.getElementById("conclusion").style.display = "none"; // Esconde a conclusão ao carregar
+    document.getElementById("game").style.display = "none";
+    document.getElementById("conclusion").style.display = "none";
 };

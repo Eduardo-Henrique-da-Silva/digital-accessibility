@@ -1,3 +1,4 @@
+// script.js
 let selectedColor = 'red'; // Cor padrão inicial
 let isPortuguese = true;
 let speechEnabled = false;
@@ -24,7 +25,9 @@ const colorsEnglish = {
 
 function selectColor(color) {
     selectedColor = color;
-    speak(`Cor selecionada: ${isPortuguese ? colors[color] : colorsEnglish[color]}`);
+    if (speechEnabled) {
+        speak(isPortuguese ? colors[color] : colorsEnglish[color]);
+    }
 }
 
 function colorCell(cell) {
@@ -33,8 +36,10 @@ function colorCell(cell) {
 
 function speak(text) {
     utterance.text = text;
+    utterance.lang = isPortuguese ? 'pt-BR' : 'en-US';
     utterance.volume = document.getElementById('volume').value;
     utterance.rate = document.getElementById('rate').value;
+    speechSynth.cancel(); // Cancela qualquer fala anterior antes de iniciar uma nova
     speechSynth.speak(utterance);
 }
 
@@ -76,6 +81,8 @@ function openColorPicker() {
     const color = prompt(isPortuguese ? "Escolha uma cor em formato HEX ou nome da cor (ex: #ff5733 ou vermelho):" : "Choose a color in HEX format or color name (e.g., #ff5733 or red):");
     if (color) {
         selectedColor = color;
-        speak(`Cor selecionada: ${color}`);
+        if (speechEnabled) {
+            speak(isPortuguese ? color : color); // Fala a cor diretamente como foi inserida
+        }
     }
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Sudoku</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">Jogo de Sudoku</h1>
+        
+        <!-- Opções de Jogo -->
+        <div class="game-options">
+            <label for="level">Escolha o Nível:</label>
+            <select id="level" onchange="startGame()">
+                <option value="1">Fácil</option>
+                <option value="5">Médio</option>
+                <option value="10">Difícil</option>
+                <option value="15">Muito Difícil</option>
+                <option value="20">Desafio</option>
+            </select>
+
+            <label for="symbols">Usar Símbolos:</label>
+            <input type="checkbox" id="symbols" onchange="toggleSymbols()">
+
+            <label for="language">Idioma:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="pt-BR">Português</option>
+                <option value="en-US">Inglês</option>
+            </select>
+
+            <button id="start-button" onclick="startGame()">Iniciar Jogo</button>
+        </div>
+
+        <!-- Controles de acessibilidade -->
+        <div class="accessibility-options">
+            <label for="font-size">Tamanho da Fonte:</label>
+            <input type="range" id="font-size" min="12" max="30" value="16" onchange="adjustFontSize()">
+
+            <label for="font-contrast">Contraste da Fonte:</label>
+            <input type="range" id="font-contrast" min="1" max="3" value="1" step="0.1" onchange="adjustFontContrast()">
+        </div>
+
+        <!-- Controles de voz -->
+        <div class="voice-controls">
+            <button onclick="toggleVoice()">Alternar Voz</button>
+            <label for="speed">Velocidade da Voz:</label>
+            <input type="range" id="speed" min="0.5" max="2" step="0.1" value="1" onchange="changeVoiceSpeed()">
+
+            <label for="voice-selection">Seleção de Voz:</label>
+            <select id="voice-selection" onchange="changeVoice()"></select>
+        </div>
+
+        <div id="sudoku-board"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

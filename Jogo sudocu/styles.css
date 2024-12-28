@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.game-options, .accessibility-options, .voice-controls {
+    margin: 20px 0;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    gap: 5px;
+}
+
+#sudoku-board input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#sudoku-board input:focus {
+    border-color: #3498db;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+label {
+    margin-right: 10px;
+}
+
+/* Responsividade para controles e bordas */
+input[type="range"] {
+    width: 100px;
+}
+
+input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+input[type="text"] {
+    font-size: 16px;
+}
+
+body {
+    font-size: 16px;
+}
+
+.accessibility-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}

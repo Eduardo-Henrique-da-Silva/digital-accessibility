@@ -1,60 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Sudoku</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jogo de Sudoku Acessível</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 id="titulo">Jogo de Sudoku</h1>
-        
-        <!-- Opções de Jogo -->
-        <div class="game-options">
-            <label for="level">Escolha o Nível:</label>
-            <select id="level" onchange="startGame()">
-                <option value="1">Fácil</option>
-                <option value="5">Médio</option>
-                <option value="10">Difícil</option>
-                <option value="15">Muito Difícil</option>
-                <option value="20">Desafio</option>
-            </select>
+<a href="../aplicações.html">Fechar    </a>
+    <!-- Tela inicial -->
+  <div id="start-screen">
+    <h1>Bem-vindo ao Sudoku Acessível</h1>
 
-            <label for="symbols">Usar Símbolos:</label>
-            <input type="checkbox" id="symbols" onchange="toggleSymbols()">
-
-            <label for="language">Idioma:</label>
-            <select id="language" onchange="changeLanguage()">
-                <option value="pt-BR">Português</option>
-                <option value="en-US">Inglês</option>
-            </select>
-
-            <button id="start-button" onclick="startGame()">Iniciar Jogo</button>
-        </div>
-
-        <!-- Controles de acessibilidade -->
-        <div class="accessibility-options">
-            <label for="font-size">Tamanho da Fonte:</label>
-            <input type="range" id="font-size" min="12" max="30" value="16" onchange="adjustFontSize()">
-
-            <label for="font-contrast">Contraste da Fonte:</label>
-            <input type="range" id="font-contrast" min="1" max="3" value="1" step="0.1" onchange="adjustFontContrast()">
-        </div>
-
-        <!-- Controles de voz -->
-        <div class="voice-controls">
-            <button onclick="toggleVoice()">Alternar Voz</button>
-            <label for="speed">Velocidade da Voz:</label>
-            <input type="range" id="speed" min="0.5" max="2" step="0.1" value="1" onchange="changeVoiceSpeed()">
-
-            <label for="voice-selection">Seleção de Voz:</label>
-            <select id="voice-selection" onchange="changeVoice()"></select>
-        </div>
-
-        <div id="sudoku-board"></div>
+    <!-- Seleção de nível de dificuldade -->
+    <div>
+      <label for="difficulty">Escolha o nível de dificuldade:</label>
+      <select id="difficulty">
+        <option value="1">Fácil</option>
+        <option value="2">Médio</option>
+        <option value="3">Difícil</option>
+        <option value="4">Muito Difícil</option>
+      </select>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Seleção de símbolos (números, letras, símbolos, etc.) -->
+    <div>
+      <label for="symbols">Escolha os símbolos:</label>
+      <select id="symbols">
+        <option value="numbers">Números</option>
+        <option value="letters">Letras</option>
+        <option value="shapes">Formas Geométricas</option>
+      </select>
+    </div>
+
+    <!-- Seleção de idioma -->
+    <div>
+      <label for="language">Escolha o idioma:</label>
+      <select id="language">
+        <option value="pt">Português</option>
+        <option value="en">Inglês</option>
+      </select>
+    </div>
+
+    <!-- Botão para começar o jogo -->
+    <button id="start-btn">Entrar para Jogar</button>
+  </div>
+
+  <!-- Jogo -->
+  <div id="game-screen" class="hidden">
+    <header>
+      <h1>Sudoku Acessível</h1>
+      <div id="controls">
+        <button onclick="exitGame()">Sair do Jogo</button>
+      </div>
+    </header>
+
+    <section class="game-container">
+      <div id="sudoku-grid" class="grid">
+        <!-- O tabuleiro de Sudoku será gerado aqui -->
+      </div>
+      <div id="voice-info">
+        <span id="level-info">Nível 1</span>
+        <span id="voice-output"></span>
+      </div>
+      <button onclick="checkSolution()">Verificar Solução</button>
+    </section>
+  </div>
+
+  <footer>
+    <p>Jogo de Sudoku Acessível | Criado para você</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

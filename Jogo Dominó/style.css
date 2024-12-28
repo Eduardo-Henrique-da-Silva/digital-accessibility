@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+}
+
+.game-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #0066cc;
+}
+
+.settings button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.settings button:hover {
+  background-color: #0056b3;
+}
+
+input[type="number"] {
+  padding: 5px;
+  margin: 5px;
+}
+
+.hand {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.hand div {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  margin: 5px;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.board span {
+  margin: 10px;
+  font-size: 1.5em;
+  padding: 10px;
+  background-color: #dcdcdc;
+  border-radius: 8px;
+}
+
+.moves {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.moves ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.moves li {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #333;
+}

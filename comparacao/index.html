@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Comparação</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="../aplicações.html" >Ir para o site</a>
+  <div class="container">
+    <header>
+      <h1>Jogo de Comparação</h1>
+    </header>
+
+    <div class="controls">
+      <button id="toggle-time" onclick="toggleTimer()">Desabilitar Tempo</button>
+      <button id="toggle-voice" onclick="toggleVoice()">Desabilitar Voz</button>
+      <div class="settings">
+        <label for="font-size">Tamanho da Fonte:</label>
+        <input type="range" id="font-size" min="10" max="30" value="16" onchange="adjustFontSize(event)">
+        <label for="contrast">Contraste:</label>
+        <input type="range" id="contrast" min="0" max="2" step="0.1" value="1" onchange="adjustContrast(event)">
+      </div>
+    </div>
+
+    <div class="game">
+      <p id="level">Nível: 1</p>
+      <p id="question">Qual é mais rápido, o avião ou o trem?</p>
+      <div class="options"></div>
+      <div id="image-container"></div>
+      <p id="timer">Tempo restante: <span id="time-left">30</span>s</p>
+      <div id="feedback"></div>
+    </div>
+
+    <footer>
+      <p>Desenvolvido com acessibilidade em mente.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

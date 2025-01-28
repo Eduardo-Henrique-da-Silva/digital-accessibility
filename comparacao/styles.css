@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+  transition: filter 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #cce7ff;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.settings input {
+  margin: 5px;
+}
+
+.game {
+  text-align: center;
+}
+
+#question {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#feedback {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode button {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode button:hover {
+  background-color: #444;
+}
+
+.dark-mode button:focus {
+  border-color: #66b3ff;
+}

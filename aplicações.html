@@ -6,42 +6,49 @@
     <title>Aplicações </title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <body  class="light|-mode">
+<body class="light-mode">
         <header>
-            <button id="toggle-dark-mode">Alternar Modo Escuro</button>
-            
-        <div ID="menu" class="model">
             <details>
-                    <summary>Menu principal    </summary>
-        <nav>
-            <ol>
-                <a href="aplicações.html">Catálogo.</a>
-                <a href="">Serviços        </a>
-                </ol>
-        </nav>
-        </details>
-        <
-        </header>
-        <button id="openSearch">Abrir Busca</button>
+                <summary title="Modo escuro, ajuste de tamanho de fonte, alto contraste e outras opções.">Menu geral e ajustes</summary>
+                <button id="toggle-dark-mode">Alternar Modo Escuro</button>
+        <br>        
+                <button id="toggle-high-contrast">Modo Alto Contraste</button>
+        <br>
+            <button id="toggle-smooth-text">Ativar Suavidade</button>
+        <br>        
+            <button id="toggle-highlight-text">Destaque de Letras</button>
+        <br>        
+            <button id="aumentarFonte">Aumentar Fonte</button>
+        <br>        
+            <button id="reduzirFonte">Reduzir Fonte</button>
+        </details>    
             
-        <div id="searchModal" class="modal">
-            <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <input type="text" id="searchBox" placeholder="Digite sua pesquisa">
-                <button id="searchButton">Pesquisar</button>
-            </div>
-        </div>
+            <details>
+                <summary>Clique aqui para pesquisar</summary>
+                <form action="" method="post">
+                    <label for="Pesquise">Pesquise</label>
+                    <input type="search" name="Pesquise" id="Pesquise" required>
+                    <br>
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                </form>
+                <p>O que você procura está aqui! Digite o termo da sua pesquisa.</p>
+            </details>    
         </header>
-        <nav>
-            <ol>
+        
+        <details>
+            <summary title="Acesse as opções de navegação e explore outros recursos do site.">Clique aqui para expandir o menu de categorias</summary>
+            <nav>
+                <ol>
                     <a href="index.html">Início.</a>
-                <a href="">Novidades.</a>
-                <a href="sobrenos.html">Informações.</a>
-                <a href="">Ajuda.</a>
-            </ol>
+        <a href="aplicações.html" title="Explore jogos interativos e educativos, desenvolvidos para promover o aprendizado e o desenvolvimento de habilidades." target="_blank">Jogos Interativos            </a>
+                    <a href="">Novidades.</a>
+                    <a href="sobrenos.html">Informações.</a>
+                    <a href="">Ajuda.</a>
+                </ol>
             </nav>
-<main>
+        </details>
+            
 <h1>Jogos acessíveis</h1>
 <p>Aqui, você encontrará diferentes tipos de jogos para auxiliar as necessidades das pessoas.</p>
 <h3>Confira</h3>
@@ -59,22 +66,22 @@
 <hr>
 
 </main>        
-                        
+                        <details>
+    <summary>Clique aqui para ver notas de rodapé</summary>
+    <footer>
+        <nav>
+            <ol>
+                <a href="">Contatos</a>
+                <a href="">Carreiras</a>
+                <a href="">Acessibilidade</a>
+                <a href="sobrenos.html">Sobre nós</a>
+                <a href="">Ajuda e suporte</a>
+            </ol>
+        </nav>   
+    </footer>
+</details>
+&copy; 2023-2025, todos os direitos reservados.    
 
-
-
-<footer>
-    <nav>
-    
-    <ol>
-        <a href="">Contatos</a>
-        <a href="">Carreiras</a>
-        <a href="">Acessibilidade</a>
-        <a href="sobrenos.html">Sobre nós</a>
-        <a href="">Ajuda e suporte</a>
-    </ol>
-</nav>
-</footer>
 <script src="js/index.js"></script>
 
 </body>

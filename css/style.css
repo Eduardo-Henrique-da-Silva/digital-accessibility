@@ -1,108 +1,213 @@
-body {
-    text-align: left;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font: 26px;
-color: var(--text-color-light);
-color: var(--text-color-dark);
-}
-
-:root {
-    --background-color-light: #D3D3D3;
---background-color-dark: #00008B;
---text-color-light: #000000;
---text-color-dark: #ffffff;
-}
-body.light-mode {
-background-color: var(--background-color-light);
-color:var(--text-color-light)
-}
-body.dark-mode {
-background-color: var(--background-color-dark);
-color:var(--text-color-dark)
-}
-button {
-margin: 20px;    
-padding: 10px 20px;
-cursor: pointer;
-}
-
-#model {
-/* Remove o ícone de triângulo de um elemento select */
-select {
-    -webkit-appearance: none; /* Para navegadores WebKit */
-    -moz-appearance: none; /* Para navegadores Firefox */
-    appearance: none; /* Padrão */
-    background: none; /* Remove o fundo padrão */
-    border: 1px solid #ccc; /* Adiciona uma borda personalizada */
-    padding: 10px; /* Adiciona padding */
-    font-size: 16px; /* Ajusta o tamanho da fonte */
-}
-
-/* Adiciona um ícone personalizado, se necessário */
-select::after {
-    content: ''; /* Conteúdo vazio para remover o ícone */
-}
-
-}
-
-
-#texto {
-    font-size: 16px;
-}
-#aumentarFonte {
-    padding: 10px 20px;
-    background-color: #4caf50;
+/* Reset de Estilos Básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body e Geral */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F4F4F4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Modo Claro */
+  body.light-mode {
+    background-color: #F4F4F4;
+    color: #333;
+  }
+  
+  /* Modo Escuro */
+  body.dark-mode {
+    background-color: #121212;
+    color: #FFFFFF;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Detalhes e Navegação */
+  details summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  details summary:hover {
+    background-color: #006699;
+  }
+  
+  details {
+    margin-bottom: 20px;
+  }
+  
+  /* Botões */
+  button {
+    background-color: #4CAF50;
     color: white;
     border: none;
-    cursor: pointer;
-}
-
-
-#texto {
+    padding: 12px 24px;
+    border-radius: 5px;
     font-size: 16px;
-}
-.botao {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: red;
-    border: none;
     cursor: pointer;
-    margin: 5px;
-}
-button {
-border-radius: 5px;
-padding: 5px 10px;
-color: red;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-h1, h2, h3, h4, p {
-text-align: left;
-font:20px;
-text-decoration: none;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-a {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  button:focus {
+    outline: 3px solid #FFB800;
+  }
+  
+  /* Links */
+  a {
+    color: #003366;
     text-decoration: none;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-display:flex;
-align-items: center;        
-justify-content: space-between;
-gap:5rem;
-color: black;    
-border-left: 4px;
-transition: 4s;        
-animation:both;
-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);    
-}
-a:hover {
-padding-left: 30px;
-border-left: 4px;
-color:white;
-box-shadow: none;    
-}
-a:link {
-color:white;
-}
-a:visited {
-color:green;
-}   
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  a:hover {
+    color: #FF6347;
+    transform: scale(1.05);
+  }
+  
+  a:focus {
+    outline: 3px solid #FFB800;
+  }
+  
+  /* Formulários */
+  input[type="text"],
+  input[type="search"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  input[type="text"]:focus,
+  input[type="search"]:focus,
+  textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Lista de Navegação */
+  nav ol {
+    padding-left: 20px;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #003366;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  nav a:focus {
+    background-color: #FFB800;
+  }
+  
+  /* Conteúdo Principal */
+  main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Notas de Rodapé */
+  footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 40px;
+  }
+  
+  footer a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  footer a:hover {
+    color: #FF6347;
+  }
+  
+  /* Acessibilidade - Aumentar/Reduzir Fonte */
+  #texto {
+    font-size: 16px;
+    transition: font-size 0.3s ease;
+  }
+  
+  #texto a {
+    font-size: 18px;
+  }
+  
+  /* Animações */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Ajustes de Responsividade */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+    
+    main {
+      padding: 15px;
+    }
+  
+    header, footer {
+      padding: 15px;
+    }
+  }
+  

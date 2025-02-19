@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Colorir</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </head>
 <body>
-<a href="../aplicações.html">Voltar    </a>
+    <a href="../aplicações.html">Voltar</a>
     <h1 id="title">Jogo de Colorir</h1>
 
     <!-- Botões de configuração de acessibilidade -->
@@ -42,11 +43,18 @@
 
     <!-- Área de desenho -->
     <div id="drawingArea" style="grid-template-columns: repeat(10, 50px);">
-        <!-- Células do desenho -->
         <div class="cell" onclick="colorCell(this)"></div>
         <div class="cell" onclick="colorCell(this)"></div>
         <div class="cell" onclick="colorCell(this)"></div>
         <!-- Adicione mais células conforme necessário -->
+    </div>
+    
+    <h3>Salve ou Imprima</h3>
+    <!-- Botões para salvar ou imprimir o desenho -->
+    
+    <div id="saveAndPrint">
+        <button onclick="saveDrawing()">Salvar Desenho</button>
+        <button onclick="printDrawing()">Imprimir Desenho</button>
     </div>
 
     <script src="script.js"></script>

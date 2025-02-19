@@ -86,3 +86,30 @@ function openColorPicker() {
         }
     }
 }
+
+// Função para salvar o desenho como uma imagem
+function saveDrawing() {
+    html2canvas(document.getElementById('drawingArea')).then(function(canvas) {
+        // Cria a imagem a partir do canvas
+        const imgData = canvas.toDataURL('image/png');
+
+        // Cria um link para o download
+        const link = document.createElement('a');
+        link.href = imgData;
+        link.download = 'desenho.png';
+        link.click();
+    });
+}
+
+// Função para imprimir o desenho
+function printDrawing() {
+    html2canvas(document.getElementById('drawingArea')).then(function(canvas) {
+        // Cria uma janela de impressão
+        const printWindow = window.open('', '', 'height=500, width=500');
+        printWindow.document.write('<html><head><title>Impressão do Desenho</title></head><body>');
+        printWindow.document.write('<img src="' + canvas.toDataURL() + '" />');
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    });
+}
